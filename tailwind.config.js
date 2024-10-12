@@ -5,7 +5,11 @@ module.exports = {
     "./public/**/*.{html}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens:{
+        "sm":"480px"
+      }
+    },
   },
   plugins: [],
 }
