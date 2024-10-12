@@ -52,6 +52,10 @@ function App() {
       </nav>
 
       {/* Intro content */}
+      {/* Image */}
+      {/* Circle */}
+      {/* Animated text */}
+      {/* texts */}
       <div></div>
     </div>
   );
