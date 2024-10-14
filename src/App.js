@@ -11,8 +11,7 @@ function App() {
 
   return (
     // intro section
-    <div className='h-1/2 lg:h-screen bg-grandiant-to-t from-indigo-200'>
-
+    <div className='h-1/2 lg:h-screen bg-gradient-to-t from-indigo-200'>
       {/* Nav bar */}
       <nav className='w-full top-0 fixed bg-white-400'>
         <div className='container mx-auto py-5 flex items-center justify-between'>
