@@ -13,7 +13,7 @@ function App() {
     // intro section
     <div className='h-1/2 lg:h-screen bg-gradient-to-t from-indigo-200'>
       {/* Nav bar */}
-      <nav className='w-full top-0 fixed bg-white-400'>
+      <nav className='w-full top-0 fixed bg-white-900 z-10'>
         <div className='container mx-auto py-5 flex items-center justify-between'>
           <div className='flex items-center gap-2'>
             <img className='w-10 h-10 rounded-full' src={logo} alt="my logo"/>
@@ -52,7 +52,15 @@ function App() {
 
       {/* Intro content */}
       {/* Image */}
+      <div>
+        <img src={logo} alt="me" className='absolute bottom-0 right-0 lg:left-0 mx-auto h-5/6 object-cover' />
+      </div>
+
       {/* Circle */}
+      <div className='hidden lg:block absolute -bottom-1/4 right-0 left-0 mx-auto w-big h-big bg-indigo-900 rounded-full
+      -z-10'>
+      </div>
+
       {/* Animated text */}
       {/* texts */}
       <div></div>
