@@ -71,12 +71,14 @@ function App() {
       <div className='hidden lg:flex flex-col gap-5 rounded-md shadow-lg absolute top-0 bottom-0 right-10 m-auto bg-white p-6 h-fit w-1/3'>
         <hi className="text-4xl font-bold text-indigo-900">Hi, I'm Serge</hi>
         <p className='text-gray-400'>
-          With over 1 years of experience on web design  and developpement. Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. N oumquam quo
-          provident, facere minus temporibus venian nostrum reprehenderit nihil ? 
+          With over 2 years of experience on web design  and developpement using React. I'm
+          a computer engineer, loving AI and Maths. Do you have any issue on the previous ?
         </p>
         <a className="bg-indigo-600 text-white text-xl px-3 py-2 rounded-md font-semibold w-fit" href="#contact">Hire Me</a>
       </div>
+
+      {/* About me section */}
+      <div></div>
     </div>
   );
 }
