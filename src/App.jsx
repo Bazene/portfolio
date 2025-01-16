@@ -1,5 +1,5 @@
 import './App.css';
-import logo from './assets/einstein.jpeg'
+import logo from './assets/serge.png'
 import React, { useState, useContext } from 'react';
 import { ThemeContext } from './context';
 
@@ -15,7 +15,7 @@ function App() {
   return (
     // intro section
     <div>
-      <div id="homepage" className='h-1/2 lg:h-screen bg-gradient-to-t from-indigo-200 dark:from-slate-800 dark:to-slate-900 relative overflow-hidden dark:'>
+      <div id="homepage" className='h-1/2 lg:h-screen bg-gradient-to-t from-indigo-200 dark:from-slate-800 dark:to-slate-900 relative overflow-hidden'>
         {/* Nav bar */}
         <nav className='w-full top-0 fixed bg-white z-10 dark:bg-slate-900'>
           <div className='container mx-auto py-5 flex items-center justify-between'>
@@ -117,7 +117,7 @@ function App() {
       </div>
 
       {/* Services */}
-      <div id="services" className='dark:bg-slate-900'>
+      <div id="services" className='dark:bg-slate-900 py-20'>
         <div className='container mx-auto'>
           {/* Top */}
           <div className='flex flex-col gap-3 items-center'>
@@ -183,7 +183,7 @@ function App() {
       </div>
 
       {/* Portfolio and project */}
-      <div id="works" className='dark:bg-slate-900 py-40'>
+      <div id="works" className='dark:bg-slate-900 py-20'>
         {/* Top */}
         <div className='flex flex-col gap-3 items-center'>
               <h1 className = 'text-indigo-600 font-bold'>PORTFOLIO</h1>
@@ -239,7 +239,7 @@ function App() {
       </div>
 
       {/* Contact */}
-      <div id="contact" className='dark:bg-slate-900 pb-40'>
+      <div id="contact" className='dark:bg-slate-900 py-20'>
         <div className='container mx-auto'>
           {/* Top */}
           <div className='flex flex-col gap-3 items-center'>
