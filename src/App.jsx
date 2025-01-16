@@ -1,9 +1,12 @@
 import './App.css';
 import logo from './assets/einstein.jpeg'
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { ThemeContext } from './context';
+
 
 function App() {
   const [menuVisible, setMenuVisible] = useState(false);
+  const { theme, changeTheme } = useContext(ThemeContext);
 
   const toogleMenu = () => {
     setMenuVisible(!menuVisible)
@@ -12,17 +15,17 @@ function App() {
   return (
     // intro section
     <div>
-      <div id="homepage" className='h-1/2 lg:h-screen bg-gradient-to-t from-indigo-200 relative overflow-hidden'>
+      <div id="homepage" className='h-1/2 lg:h-screen bg-gradient-to-t from-indigo-200 dark:from-slate-800 dark:to-slate-900 relative overflow-hidden dark:'>
         {/* Nav bar */}
-        <nav className='w-full top-0 fixed bg-white z-10'>
+        <nav className='w-full top-0 fixed bg-white z-10 dark:bg-slate-900'>
           <div className='container mx-auto py-5 flex items-center justify-between'>
             <div className='flex items-center gap-2'>
               <img className='w-10 h-10 rounded-full' src={logo} alt="my logo"/>
-              <span className='text-2xl font-bold text-indigo-900'>Portwind.</span>
+              <span className='text-2xl font-bold text-indigo-900 dark:text-white'>Portwind.</span>
             </div>
 
             <div>
-              <ul className='hidden md:flex space-x-10 text-gray-600 font-bold text-sm uppercase'>
+              <ul className='hidden md:flex space-x-10 text-gray-600 dark:text-gray-100 font-bold text-sm uppercase'>
                 <li className='hover:text-gray-500'> <a href='#homepage'>homepage</a> </li>
                 <li className='hover:text-gray-500'> <a href='#about'>about me</a> </li>
                 <li className='hover:text-gray-500'> <a href='#services'>services</a> </li>
@@ -31,8 +34,8 @@ function App() {
               </ul>
             </div> 
 
-            <div>
-              <img src={logo} alt='moon logo' className='hidden md:block w-5 cursor-pointer'/>
+            <div onClick={() => changeTheme()} className='cursor-pointer'>
+              {theme === 'light' ? '☀️' : '🌙'}
             </div>
 
             <div onClick={toogleMenu} className = {`${menuVisible ? 'bg-white':'bg-white'} space-y-1 md:hidden cursor-pointer z-20`}>
@@ -68,7 +71,7 @@ function App() {
         </div>
 
         {/* texts */}
-        <div className='hidden lg:flex flex-col gap-5 rounded-md shadow-lg absolute top-0 bottom-0 right-10 m-auto bg-white p-6 h-fit w-1/3'>
+        <div className='hidden lg:flex flex-col gap-5 rounded-md shadow-lg absolute top-0 bottom-0 right-10 m-auto bg-white dark:bg-slate-900 dark:shadow-slate-800 p-6 h-fit w-1/3'>
           <hi className="text-4xl font-bold text-indigo-900">Hi, I'm Serge</hi>
           <p className='text-gray-400'>
             With over 2 years of experience on web design  and developpement using React. I'm
@@ -79,7 +82,7 @@ function App() {
       </div>
 
       {/* About me section */}
-      <div id="about" className = 'px-10 '>
+      <div id="about" className = 'dark:bg-slate-900 px-10 '>
         <div className = 'container mx-auto py-40 flex flex-col-reverse lg:flex-row items-center gap-20'>
           {/* left sight */}
           <div className = 'relative w-1/3'>
@@ -92,20 +95,20 @@ function App() {
           {/* right sight */}
           <div className = 'my-auto flex flex-col gap-3'>
             <h1 className = 'text-indigo-600 font-bold'>ABOUT ME</h1>
-            <h1 className = 'text-3xl font-medium'>Better design</h1>
-            <h1 className = 'text-3xl font-medium'>Better experience</h1>
-            <p className = 'to-gray-400'>
+            <h1 className = 'text-3xl font-medium dark:text-white'>Better design</h1>
+            <h1 className = 'text-3xl font-medium dark:text-white'>Better experience</h1>
+            <p className = 'text-gray-400'>
               I design and build digital products. I'm also a multi-discoplinary maker with over 1 year of experience in wide range of design disciplines.
             </p>
-            <h2 className = 'to-gray-400 font-medium'>HTML</h2>
+            <h2 className = 'text-gray-400 font-medium'>HTML</h2>
             <div className = 'w-full bg-gray-200 h-1.5 rounded-md'>
               <div className = 'w-full bg-indigo-600 h-1.5 rounded-md'></div>
             </div>
-            <h2 className = 'to-gray-400 font-medium'>Javascript</h2>
+            <h2 className = 'text-gray-400 font-medium'>Javascript</h2>
             <div className = 'w-full bg-gray-200 h-1.5 rounded-md'>
               <div className = 'w-4/6 bg-indigo-600 h-1.5 rounded-md'></div>
             </div>
-            <h2 className = 'to-gray-400 font-medium'>React</h2>
+            <h2 className = 'text-gray-400 font-medium'>React</h2>
             <div className = 'w-full bg-gray-200 h-1.5 rounded-md'>
               <div className = 'w-5/6 bg-indigo-600 h-1.5 rounded-md'></div>
             </div>
@@ -114,12 +117,12 @@ function App() {
       </div>
 
       {/* Services */}
-      <div id="services">
+      <div id="services" className='dark:bg-slate-900'>
         <div className='container mx-auto'>
           {/* Top */}
           <div className='flex flex-col gap-3 items-center'>
             <h1 className = 'text-indigo-600 font-bold'>SERVICES</h1>
-            <h1 className = 'text-3xl'>What do I offer ?</h1>
+            <h1 className = 'text-3xl dark:text-white'>What do I offer ?</h1>
             <p className='w-1/2 text-center text-gray-400'>
               My approach to website design is to create a website that strengthens
               your company's brand while ensuring ease of use and simplicity for your audiance.
@@ -131,7 +134,7 @@ function App() {
             {/* card */}
             <div className='w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3'>
               <img src={logo} alt="me" className='w-10' />
-              <h1 className='font-medium text-lg'>UX / UI Design</h1>
+              <h1 className='font-medium text-lg dark:text-white'>UX / UI Design</h1>
               <p className='text-gray-400'>I specialize in creating interactive website for individuals ans small businesses.</p>
               <a className='text-indigo-600 font-semibold text-sm' href=''>Read more</a>
             </div>
@@ -139,7 +142,7 @@ function App() {
             {/* card */}
             <div className='w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3'>
               <img src={logo} alt="me" className='w-10' />
-              <h1 className='font-medium text-lg'>UX / UI Design</h1>
+              <h1 className='font-medium text-lg dark:text-white'>UX / UI Design</h1>
               <p className='text-gray-400'>I specialize in creating interactive website for individuals ans small businesses.</p>
               <a className='text-indigo-600 font-semibold text-sm' href=''>Read more</a>
             </div>
@@ -147,7 +150,7 @@ function App() {
             {/* card */}
             <div className='w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3'>
               <img src={logo} alt="me" className='w-10' />
-              <h1 className='font-medium text-lg'>UX / UI Design</h1>
+              <h1 className='font-medium text-lg dark:text-white'>UX / UI Design</h1>
               <p className='text-gray-400'>I specialize in creating interactive website for individuals ans small businesses.</p>
               <a className='text-indigo-600 font-semibold text-sm' href=''>Read more</a>
             </div>
@@ -155,7 +158,7 @@ function App() {
             {/* card */}
             <div className='w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3'>
               <img src={logo} alt="me" className='w-10' />
-              <h1 className='font-medium text-lg'>UX / UI Design</h1>
+              <h1 className='font-medium text-lg dark:text-white'>UX / UI Design</h1>
               <p className='text-gray-400'>I specialize in creating interactive website for individuals ans small businesses.</p>
               <a className='text-indigo-600 font-semibold text-sm' href=''>Read more</a>
             </div>
@@ -163,7 +166,7 @@ function App() {
             {/* card */}
             <div className='w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3'>
               <img src={logo} alt="me" className='w-10' />
-              <h1 className='font-medium text-lg'>UX / UI Design</h1>
+              <h1 className='font-medium text-lg dark:text-white'>UX / UI Design</h1>
               <p className='text-gray-400'>I specialize in creating interactive website for individuals ans small businesses.</p>
               <a className='text-indigo-600 font-semibold text-sm' href=''>Read more</a>
             </div>
@@ -171,7 +174,7 @@ function App() {
             {/* card */}
             <div className='w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3'>
               <img src={logo} alt="me" className='w-10' />
-              <h1 className='font-medium text-lg'>UX / UI Design</h1>
+              <h1 className='font-medium text-lg dark:text-white'>UX / UI Design</h1>
               <p className='text-gray-400'>I specialize in creating interactive website for individuals ans small businesses.</p>
               <a className='text-indigo-600 font-semibold text-sm' href=''>Read more</a>
             </div>
@@ -180,11 +183,11 @@ function App() {
       </div>
 
       {/* Portfolio and project */}
-      <div id="works" className='py-40'>
+      <div id="works" className='dark:bg-slate-900 py-40'>
         {/* Top */}
         <div className='flex flex-col gap-3 items-center'>
               <h1 className = 'text-indigo-600 font-bold'>PORTFOLIO</h1>
-              <h1 className = 'text-3xl'>Works and Projects</h1>
+              <h1 className = 'text-3xl dark:text-white'>Works and Projects</h1>
               <p className='w-1/2 text-center text-gray-400'>
                 I help designers, small agencies and businesses bring their ideas to life.
                 Powered by Figma, VS Code and coffee, I turn your requirements into a well-designed websites.
@@ -236,12 +239,12 @@ function App() {
       </div>
 
       {/* Contact */}
-      <div id="contact" className='pb-40'>
+      <div id="contact" className='dark:bg-slate-900 pb-40'>
         <div className='container mx-auto'>
           {/* Top */}
           <div className='flex flex-col gap-3 items-center'>
                 <h1 className = 'text-indigo-600 font-bold'>CONTACT</h1>
-                <h1 className = 'text-3xl'>Have a Question?</h1>
+                <h1 className = 'text-3xl dark:text-white'>Have a Question?</h1>
                 <p className='w-1/2 text-center text-gray-400'>
                   Do you have an idea? Let's discuss it and see what we can do together.
                 </p>
@@ -249,9 +252,9 @@ function App() {
 
           {/* Bottom */}
           <form className='mt-5 p-8 flex flex-col gap-5 items-center'>
-            <input className='p-2 w-full md:w-1/2 ring-1 ring-indigo-300 rounded-sm' type="text" placeholder='Name Surname'/>
-            <input className='p-2 w-full md:w-1/2 ring-1 ring-indigo-300 rounded-sm' type="email" placeholder='Email'/>
-            <textarea className='p-2 w-full md:w-1/2 ring-1 ring-indigo-300 rounded-sm' cols="30" rows="10" placeholder='Message...'></textarea>
+            <input className='p-2 w-full md:w-1/2 ring-1 ring-indigo-300 rounded-sm dark:bg-slate-800 dak:ring-0 dark:text-white' type="text" placeholder='Name Surname'/>
+            <input className='p-2 w-full md:w-1/2 ring-1 ring-indigo-300 rounded-sm dark:bg-slate-800 dak:ring-0 dark:text-white' type="email" placeholder='Email'/>
+            <textarea className='p-2 w-full md:w-1/2 ring-1 ring-indigo-300 rounded-sm dark:bg-slate-800 dak:ring-0 dark:text-white' cols="30" rows="10" placeholder='Message...'></textarea>
             <buttom className="w-1/2 bg-indigo-600 text-white font-medium px-3 py-2 rounded-md cursor-pointer text-center">Submit</buttom>
           </form>
         </div>
