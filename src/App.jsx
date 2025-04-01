@@ -11,7 +11,6 @@ import { GiArtificialIntelligence } from "react-icons/gi";
 import { IoThunderstormOutline } from "react-icons/io5";
 
 
-
 function App() {
 
   return (
@@ -56,7 +55,7 @@ function App() {
           {/* right sight */}
           <div className = 'my-auto flex flex-col gap-3'>
             <h1 className = 'text-indigo-600 font-bold'>ABOUT ME</h1>
-            <h1 className = 'text-3xl font-medium dark:text-white'>Best Software Engineer</h1>
+            <h1 className = 'text-3xl font-medium dark:text-white'>Software Engineer</h1>
             <p className = 'text-gray-400'>
               I design and build digital products. I'm also a multi-discoplinary maker with over 1 year of experience in wide range of design disciplines.
             </p>
@@ -123,11 +122,20 @@ function App() {
                 Powered by Figma, VS Code and coffee, I turn your requirements into a well-designed websites."
         />
 
-        <div className='p-5 sm:p-0 flex flex-wrap justify-between'>
-          <CardProjects logo={logo} />
-          <CardProjects logo={logo} />
-          <CardProjects logo={logo} />
-          <CardProjects logo={logo} />
+        <div className='p-5 sm:p-0 flex flex-wrap justify-center'>
+          <CardProjects Logo={SiAmazonwebservices} size={25} 
+            cardTile="Connected Bracelet" 
+            cardBody="
+            This project involves designing and producing a connected bracelet enabling real-time monitoring of patients suffering from cardiovascular diseases.
+            "
+          />
+
+          <CardProjects  Logo={SiAmazonwebservices} size={25} 
+            cardTile="My portfolio" 
+            cardBody="
+            This project involeves building my portfolio and present what I'm doing as a Software engineer.
+            "
+          />
         </div>
       </div>
 
@@ -136,7 +144,7 @@ function App() {
         <div className='container mx-auto'>
           <HeaderSection 
             headTitle="CONTACT" 
-            headSubTitle="Have a Question?" 
+            headSubTitle="Have a question?" 
             headBody="Do you have an idea? Let's discuss it and see what we can do together."
           />
 
