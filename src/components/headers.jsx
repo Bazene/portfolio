@@ -26,6 +26,8 @@ export default function Header() {
                     <li className='hover:text-gray-500'> <a href='#services'>services</a> </li>
                     <li className='hover:text-gray-500'> <a href='#works'>works</a> </li>
                     <li className='hover:text-gray-500'> <a href='#contact'>contact</a> </li>
+                    <li className='hover:text-gray-500'> <a href='#'>my programm</a> </li>
+                    <li className='hover:text-gray-500'> <a href='#'>my cv</a> </li>
                 </ul>
             </div> 
 
@@ -43,6 +45,8 @@ export default function Header() {
                 <li> <a onClick={toogleMenu} href='#services'>services</a> </li>
                 <li> <a onClick={toogleMenu} href='#works'>works</a> </li>
                 <li> <a onClick={toogleMenu} href='#contact'>contact</a> </li>
+                <li> <a onClick={toogleMenu} href='#'>my program</a> </li>
+                <li> <a onClick={toogleMenu} href='#'>my cv</a> </li>
             </ul>
         </div>
     );
