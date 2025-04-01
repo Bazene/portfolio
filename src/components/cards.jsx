@@ -21,3 +21,14 @@ export function CardProjects({Logo, size, cardBody, cardTile}) {
         </div>
     );
 };
+
+export function CardTechnologie({technologie_name, tech_percentate}){
+    return(
+        <>
+            <h2 className = 'text-gray-400 font-medium'>{technologie_name}</h2>
+            <div className = 'w-full bg-gray-200 h-1.5 rounded-md'>
+                <div className = {`${tech_percentate} bg-indigo-600 h-1.5 rounded-md`}></div>
+            </div>
+        </>
+    )
+}

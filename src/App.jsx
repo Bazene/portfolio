@@ -2,7 +2,7 @@ import './App.css';
 import logo from './assets/serge.png'
 import React from 'react';
 import { HeaderSection } from './components/headers';
-import CardServices, { CardProjects } from './components/cards'; // A default component don't need destrucration
+import CardServices, { CardProjects,  CardTechnologie} from './components/cards'; // A default component don't need destrucration
 import { SiAmazonwebservices } from "react-icons/si";
 import { TfiWorld } from "react-icons/tfi";
 import { SiOdoo } from "react-icons/si";
@@ -59,18 +59,10 @@ function App() {
             <p className = 'text-gray-400'>
               I design and build digital products. I'm also a multi-discoplinary maker with over 1 year of experience in wide range of design disciplines.
             </p>
-            <h2 className = 'text-gray-400 font-medium'>HTML</h2>
-            <div className = 'w-full bg-gray-200 h-1.5 rounded-md'>
-              <div className = 'w-full bg-indigo-600 h-1.5 rounded-md'></div>
-            </div>
-            <h2 className = 'text-gray-400 font-medium'>Javascript</h2>
-            <div className = 'w-full bg-gray-200 h-1.5 rounded-md'>
-              <div className = 'w-4/6 bg-indigo-600 h-1.5 rounded-md'></div>
-            </div>
-            <h2 className = 'text-gray-400 font-medium'>React</h2>
-            <div className = 'w-full bg-gray-200 h-1.5 rounded-md'>
-              <div className = 'w-5/6 bg-indigo-600 h-1.5 rounded-md'></div>
-            </div>
+            <CardTechnologie technologie_name={'Python'} tech_percentate={'w-4/6'}/>
+            <CardTechnologie technologie_name={'HTML/CSS'} tech_percentate={'w-5/6'}/>
+            <CardTechnologie technologie_name={'Javascript'} tech_percentate={'w-3/6'}/>
+            <CardTechnologie technologie_name={'React'} tech_percentate={'w-2/6'}/>
           </div>
         </div>
       </div>
@@ -118,8 +110,9 @@ function App() {
         <HeaderSection 
             headTitle="PORTFOLIO" 
             headSubTitle="Works and Projects" 
-            headBody="I help designers, small agencies and businesses bring their ideas to life.
-                Powered by Figma, VS Code and coffee, I turn your requirements into a well-designed websites."
+            headBody="
+              I design complex systems using technologies such as Python, JavaScript, Postgress, SQL, etc...
+            "
         />
 
         <div className='p-5 sm:p-0 flex flex-wrap justify-center'>
