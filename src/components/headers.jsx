@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { ThemeContext } from "../context";
 import logo from '../assets/serge.png'
+import { IoMenuSharp } from "react-icons/io5";
 
 
 export default function Header() {
@@ -25,6 +26,8 @@ export default function Header() {
                     <li className='hover:text-gray-500'> <a href='#services'>services</a> </li>
                     <li className='hover:text-gray-500'> <a href='#works'>works</a> </li>
                     <li className='hover:text-gray-500'> <a href='#contact'>contact</a> </li>
+                    <li className='hover:text-gray-500'> <a href='#'>my programm</a> </li>
+                    <li className='hover:text-gray-500'> <a href='#'>my cv</a> </li>
                 </ul>
             </div> 
 
@@ -32,10 +35,8 @@ export default function Header() {
                 {theme === 'light' ? '☀️' : '🌙'}
             </div>
 
-            <div onClick={toogleMenu} className = {`${menuVisible ? 'bg-white':'bg-white'} space-y-1 md:hidden cursor-pointer z-20`}>
-                <div className='w-6 h-0.5 bg-black'></div>
-                <div className='w-6 h-0.5 bg-black'></div>
-                <div className='w-6 h-0.5 bg-black'></div>
+            <div onClick={toogleMenu} className = "md:hidden cursor-pointer z-20 items-center">
+                <IoMenuSharp size={25} className={`${menuVisible ? 'text-white':'text-black'} dark:text-white`}/>
             </div>
 
             <ul className= {`${menuVisible ? 'block':'hidden'} bg-indigo-900 absolute left-0 top-0 w-full p-10 rounded-b-3xl space-y-10 text-white text-center`}>
@@ -44,6 +45,8 @@ export default function Header() {
                 <li> <a onClick={toogleMenu} href='#services'>services</a> </li>
                 <li> <a onClick={toogleMenu} href='#works'>works</a> </li>
                 <li> <a onClick={toogleMenu} href='#contact'>contact</a> </li>
+                <li> <a onClick={toogleMenu} href='#'>my program</a> </li>
+                <li> <a onClick={toogleMenu} href='#'>my cv</a> </li>
             </ul>
         </div>
     );
@@ -59,5 +62,4 @@ export function HeaderSection ({headTitle, headSubTitle, headBody})  {
         </div>
     );
 };
-
 
