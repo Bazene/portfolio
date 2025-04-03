@@ -109,7 +109,7 @@ function App() {
       <div id="works" className='dark:bg-slate-900 py-20'>
         <HeaderSection 
             headTitle="PORTFOLIO" 
-            headSubTitle="Works and Projects" 
+            headSubTitle="Personal Projects" 
             headBody="
               I design complex systems using technologies such as Python, JavaScript, Postgress, SQL, etc...
             "
@@ -121,6 +121,7 @@ function App() {
             cardBody="
             This project involves designing and producing a connected bracelet enabling real-time monitoring of patients suffering from cardiovascular diseases.
             "
+            repoLink="https://github.com/Bazene/portfolio.git"
           />
 
           <CardProjects  Logo={SiAmazonwebservices} size={25} 
@@ -128,6 +129,7 @@ function App() {
             cardBody="
             This project involeves building my portfolio and present what I'm doing as a Software engineer.
             "
+            repoLink="https://github.com/Bazene/Partie-web-du-syst-me-de-suivi-temps-r-el-des-malades-cardiovasculaire.git"
           />
         </div>
       </div>
