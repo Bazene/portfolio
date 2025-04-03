@@ -78,27 +78,27 @@ function App() {
           />
 
           <div className='p-5 sm:p-0 flex flex-wrap justify-between'>
-            <CardServices  Logo={TfiWorld} size={25} cardTile="FULL-STACK WEB" 
+            <CardServices  Logo={SiOdoo} size={30} cardTile="Odoo DEV" 
               cardBody="I specialize in creating interactive website for individuals ans small businesses."
             />
 
-            <CardServices  Logo={GiArtificialIntelligence} size={25} cardTile="ARTIFICIAL INTELLIGENT" 
+            <CardServices  Logo={TfiWorld} size={25} cardTile="FULL-STACK WEB" 
               cardBody="I specialize in creating interactive website for individuals ans small businesses."
             />
 
             <CardServices  Logo={FcElectronics} size={25} cardTile="ELECTRONICS" 
               cardBody="I specialize in creating interactive website for individuals ans small businesses."
             />
-
+            
             <CardServices  Logo={IoThunderstormOutline} size={25} cardTile="INTERNET OF THINGS" 
               cardBody="I specialize in creating interactive website for individuals ans small businesses."
               />
-
-            <CardServices  Logo={SiOdoo} size={30} cardTile="Odoo DEV" 
-              cardBody="I specialize in creating interactive website for individuals ans small businesses."
-              />
-           
+            
             <CardServices  Logo={SiAmazonwebservices} size={25} cardTile="AWS" 
+              cardBody="I specialize in creating interactive website for individuals ans small businesses."
+            />
+
+            <CardServices  Logo={GiArtificialIntelligence} size={25} cardTile="ARTIFICIAL INTELLIGENT" 
               cardBody="I specialize in creating interactive website for individuals ans small businesses."
             />
           </div>
@@ -109,7 +109,7 @@ function App() {
       <div id="works" className='dark:bg-slate-900 py-20'>
         <HeaderSection 
             headTitle="PORTFOLIO" 
-            headSubTitle="Works and Projects" 
+            headSubTitle="Personal Projects" 
             headBody="
               I design complex systems using technologies such as Python, JavaScript, Postgress, SQL, etc...
             "
@@ -121,6 +121,7 @@ function App() {
             cardBody="
             This project involves designing and producing a connected bracelet enabling real-time monitoring of patients suffering from cardiovascular diseases.
             "
+            repoLink="https://github.com/Bazene/portfolio.git"
           />
 
           <CardProjects  Logo={SiAmazonwebservices} size={25} 
@@ -128,6 +129,7 @@ function App() {
             cardBody="
             This project involeves building my portfolio and present what I'm doing as a Software engineer.
             "
+            repoLink="https://github.com/Bazene/Partie-web-du-syst-me-de-suivi-temps-r-el-des-malades-cardiovasculaire.git"
           />
         </div>
       </div>

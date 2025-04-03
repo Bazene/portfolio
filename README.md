@@ -69,3 +69,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### When you clone this repo, you must follow the following steps:
 Install dependances : `npm install` 
 Start the project: `npm start`
+
+
+## REACT COMPONENT LIBRARIES
+1. Tailwind + shadcn/ui (Best for Utility-First Styling & Modern UI)
+2. Material-UI (MUI) (Best for Google Material Design)
+3. Ant Design (Best for Enterprise & Business UI)
+4. Chakra UI (Best for Flexibility & Simplicity)
+5. React Bootstrap (Best for Bootstrap Lovers)
+
+![alt text](image.png)
+
+For this repo, we will use shadcn/ui and Ant Design
+
+# How can I use shadcn/ui
+
+
+# How can I use Ant Design
