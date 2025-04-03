@@ -81,3 +81,8 @@ Start the project: `npm start`
 ![alt text](image.png)
 
 For this repo, we will use shadcn/ui and Ant Design
+
+# How can I use shadcn/ui
+
+
+# How can I use Ant Design
