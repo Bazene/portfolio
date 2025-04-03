@@ -78,27 +78,27 @@ function App() {
           />
 
           <div className='p-5 sm:p-0 flex flex-wrap justify-between'>
-            <CardServices  Logo={TfiWorld} size={25} cardTile="FULL-STACK WEB" 
+            <CardServices  Logo={SiOdoo} size={30} cardTile="Odoo DEV" 
               cardBody="I specialize in creating interactive website for individuals ans small businesses."
             />
 
-            <CardServices  Logo={GiArtificialIntelligence} size={25} cardTile="ARTIFICIAL INTELLIGENT" 
+            <CardServices  Logo={TfiWorld} size={25} cardTile="FULL-STACK WEB" 
               cardBody="I specialize in creating interactive website for individuals ans small businesses."
             />
 
             <CardServices  Logo={FcElectronics} size={25} cardTile="ELECTRONICS" 
               cardBody="I specialize in creating interactive website for individuals ans small businesses."
             />
-
+            
             <CardServices  Logo={IoThunderstormOutline} size={25} cardTile="INTERNET OF THINGS" 
               cardBody="I specialize in creating interactive website for individuals ans small businesses."
               />
-
-            <CardServices  Logo={SiOdoo} size={30} cardTile="Odoo DEV" 
-              cardBody="I specialize in creating interactive website for individuals ans small businesses."
-              />
-           
+            
             <CardServices  Logo={SiAmazonwebservices} size={25} cardTile="AWS" 
+              cardBody="I specialize in creating interactive website for individuals ans small businesses."
+            />
+
+            <CardServices  Logo={GiArtificialIntelligence} size={25} cardTile="ARTIFICIAL INTELLIGENT" 
               cardBody="I specialize in creating interactive website for individuals ans small businesses."
             />
           </div>
